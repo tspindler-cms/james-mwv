@@ -1,0 +1,8 @@
+model = {
+	lods = {		
+		{"cvn65_2003_dcs.edm", 5000.000000};
+		{"cvn65_2003_5km_dcs.edm", 15000.000000};
+		{"cvn65_2003_15km_dcs.edm", 30000.000000};
+	};
+	collision_shell = "cvn65_2003_coll_dcs.edm";
+}

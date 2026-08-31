@@ -1,0 +1,10 @@
+wave = {
+    "Effects/Weapons/Cannon/50mmGun_1.wav",
+    "Effects/Weapons/Cannon/50mmGun_2.wav",
+    "Effects/Weapons/Cannon/50mmGun_3.wav",
+    }
+inner_radius = 1
+outer_radius = 4000
+detached = true
+pitch_random = 0.05
+gain = 25

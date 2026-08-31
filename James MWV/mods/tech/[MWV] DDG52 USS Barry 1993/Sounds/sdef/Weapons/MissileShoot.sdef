@@ -1,0 +1,10 @@
+wave = {
+    "Effects/Weapons/MissileShoot_1.wav",
+    "Effects/Weapons/MissileShoot_2.wav",
+    "Effects/Weapons/MissileShoot_3.wav",
+    }
+detached = true
+inner_radius = 200
+outer_radius = 1500
+pitch_random = 0.08
+gain = 20.0

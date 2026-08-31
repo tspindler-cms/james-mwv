@@ -1,0 +1,11 @@
+wave = {
+    "Effects/Weapons/MissileLaunch2_1.wav",
+    "Effects/Weapons/MissileLaunch2_2.wav",
+    "Effects/Weapons/MissileLaunch2_3.wav",
+    "Effects/Weapons/MissileLaunch2_4.wav",
+    }
+detached = true
+inner_radius = 100
+outer_radius = 1000
+pitch_random = 0.08
+gain = 20
