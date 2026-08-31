@@ -11,5 +11,5 @@ References:
 
 KNOWN ISSUES
 No normal maps or roughMet maps are available currently, textures will be redone later
-ICLS is not working correctly, probably fixed
+ACLS&ICLS is not working correctly for TOMCAT.
 Helo operations are largely untested and recovery for 16 helos is broken
