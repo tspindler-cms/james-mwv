@@ -10,3 +10,4 @@ References:
 * https://en.wikipedia.org/wiki/USS_Barry_(DDG-52)
 
 KNOWN ISSUES
+* All VLS missile launch sounds missing

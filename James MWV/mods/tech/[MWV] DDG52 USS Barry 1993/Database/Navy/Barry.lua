@@ -3,6 +3,7 @@
 GT = {};
 dofile(current_mod_path..'/Database/scripts/Barry_RunwaysAndRoutes.lua') -- the runways and taxiway lua file
 GT_t.ws = 0;
+GT.virtualStwID_names = { [1] = _("Front"), [2] = _("Back"), }
 
 set_recursive_metatable(GT, GT_t.generic_ship)
 
@@ -199,291 +200,6 @@ GT.WS[ws].reference_angle_Y = math.rad(180);
 GT.WS[ws].LN[1].fireAnimationArgument = 1223;
 GT.WS[ws].LN[1].BR[1].connector_name = 'POINT_CIWS_2'
 
--------------------------------------------------------------------------------------------------
---   VLS FRONT 1
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS1';
-GT.WS[ws].center = 'VF25';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VF11', recoilArgument = 1411, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF12', recoilArgument = 1412, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF13', recoilArgument = 1413, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF14', recoilArgument = 1414, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF15', recoilArgument = 1415, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF16', recoilArgument = 1416, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF17', recoilArgument = 1417, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF18', recoilArgument = 1418, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS FRONT 2
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS1';
-GT.WS[ws].center = 'VF25';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 5;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 5;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VF21', recoilArgument = 1421, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF22', recoilArgument = 1422, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF23', recoilArgument = 1423, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF24', recoilArgument = 1424, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF25', recoilArgument = 1425, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS FRONT 3
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS1';
-GT.WS[ws].center = 'VF25';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VF31', recoilArgument = 1431, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF32', recoilArgument = 1432, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF33', recoilArgument = 1433, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF34', recoilArgument = 1434, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF35', recoilArgument = 1435, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF36', recoilArgument = 1436, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF37', recoilArgument = 1437, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF38', recoilArgument = 1438, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS FRONT 4
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS1';
-GT.WS[ws].center = 'VF25';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 4;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VF41', recoilArgument = 1441, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF42', recoilArgument = 1442, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF43', recoilArgument = 1443, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF44', recoilArgument = 1444, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
-
--------------------------------------------------------------------------------------------------
---   VLS REAR 1
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 4;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR15', recoilArgument = 1515, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR16', recoilArgument = 1516, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR17', recoilArgument = 1517, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR18', recoilArgument = 1518, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 2
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR21', recoilArgument = 1521, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR22', recoilArgument = 1522, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR23', recoilArgument = 1523, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR24', recoilArgument = 1524, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR25', recoilArgument = 1525, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR26', recoilArgument = 1526, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR27', recoilArgument = 1527, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR28', recoilArgument = 1528, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 3
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR31', recoilArgument = 1531, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR32', recoilArgument = 1532, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR33', recoilArgument = 1533, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR34', recoilArgument = 1534, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR35', recoilArgument = 1535, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR36', recoilArgument = 1536, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR37', recoilArgument = 1537, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR38', recoilArgument = 1538, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 4
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR41', recoilArgument = 1541, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR42', recoilArgument = 1542, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR43', recoilArgument = 1543, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR44', recoilArgument = 1544, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR45', recoilArgument = 1545, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR46', recoilArgument = 1546, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR47', recoilArgument = 1547, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR48', recoilArgument = 1548, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 5
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR51', recoilArgument = 1551, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR52', recoilArgument = 1552, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR53', recoilArgument = 1553, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR54', recoilArgument = 1554, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR55', recoilArgument = 1555, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR56', recoilArgument = 1556, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR57', recoilArgument = 1557, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR58', recoilArgument = 1558, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 6
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 5;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 5;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR61', recoilArgument = 1561, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR62', recoilArgument = 1562, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR63', recoilArgument = 1563, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR64', recoilArgument = 1564, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR65', recoilArgument = 1565, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 7
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR71', recoilArgument = 1571, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR72', recoilArgument = 1572, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR73', recoilArgument = 1573, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR74', recoilArgument = 1574, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR75', recoilArgument = 1575, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR76', recoilArgument = 1576, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR77', recoilArgument = 1577, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR78', recoilArgument = 1578, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------------------------------------------------------
---   VLS REAR 8
--------------------------------------------------------------------------------------------------
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR45';
-GT.WS[ws].LN[1].show_external_missile = false 
-GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
-GT.WS[ws].LN[1].BR = {  
-	{connector_name = 'VR81', recoilArgument = 1581, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR82', recoilArgument = 1582, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR83', recoilArgument = 1583, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR84', recoilArgument = 1584, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR85', recoilArgument = 1585, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR86', recoilArgument = 1586, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR87', recoilArgument = 1587, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR88', recoilArgument = 1588, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
--------------------------------------------------- Tomahawk -------------------------------------------------------------
--- Tomahawk 
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_TOMAHAWK )
-GT.WS[ws].area = 'VLS1';
-GT.WS[ws].center = 'VF46';
-GT.WS[ws].LN[1].show_external_missile = false 
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 4;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
-GT.WS[ws].LN[1].BR = {  	
-	{connector_name = 'VF45', recoilArgument = 1445, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF46', recoilArgument = 1446, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF47', recoilArgument = 1447, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VF48', recoilArgument = 1448, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
-
--------------------------------------------------- Tomahawk -------------------------------------------------------------
--- Tomahawk 
-ws = GT_t.inc_ws();
-GT.WS[ws] = {}
-set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_TOMAHAWK )
-GT.WS[ws].area = 'VLS2';
-GT.WS[ws].center = 'VR86';
-GT.WS[ws].LN[1].show_external_missile = false 
---GT.WS[ws].LN[1].max_number_of_missiles_channels = 4;
-GT.WS[ws].LN[1].PL[1].ammo_capacity = 4;
-GT.WS[ws].LN[1].BR = {  	
-	{connector_name = 'VR11', recoilArgument = 1511, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR12', recoilArgument = 1512, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR13', recoilArgument = 1513, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-	{connector_name = 'VR14', recoilArgument = 1514, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
-}
-
 ------------------------------------------- RGM-84 Harpoon Launchers ---------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
@@ -508,7 +224,6 @@ GT.WS[ws].LN[1].BR = {
 						{connector_name = 'POINT_HARPOON_7', drawArgument = 1617},
 						{connector_name = 'POINT_HARPOON_8', drawArgument = 1618},
 					}
-
 
 -----------------------------------------------------------------------------------------------------------------------------
 -- AIGES trackers
@@ -546,6 +261,154 @@ for i=2,24 do
 	set_recursive_metatable(GT.WS[ws], GT.WS[first_BarrySPY1_tracker_id]);
 	table.insert(BarrySPY1_tracker_ws, {{'self', ws}})
 end;
+-----------------------------------------------------------------------------------------------------------------------------
+local barry_front_cells = {
+	{connector_name = 'VF11', recoilArgument = 1411, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF12', recoilArgument = 1412, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF13', recoilArgument = 1413, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF14', recoilArgument = 1414, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF15', recoilArgument = 1415, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF16', recoilArgument = 1416, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF17', recoilArgument = 1417, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF18', recoilArgument = 1418, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF21', recoilArgument = 1421, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF22', recoilArgument = 1422, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF23', recoilArgument = 1423, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF24', recoilArgument = 1424, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF25', recoilArgument = 1425, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF31', recoilArgument = 1431, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF32', recoilArgument = 1432, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF33', recoilArgument = 1433, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF34', recoilArgument = 1434, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF35', recoilArgument = 1435, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF36', recoilArgument = 1436, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF37', recoilArgument = 1437, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF38', recoilArgument = 1438, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF41', recoilArgument = 1441, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF42', recoilArgument = 1442, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF43', recoilArgument = 1443, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF44', recoilArgument = 1444, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF45', recoilArgument = 1445, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF46', recoilArgument = 1446, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF47', recoilArgument = 1447, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VF48', recoilArgument = 1448, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+
+}
+
+local barry_rear_cells = {
+	{connector_name = 'VR11', recoilArgument = 1511, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR12', recoilArgument = 1512, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR13', recoilArgument = 1513, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR14', recoilArgument = 1514, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR15', recoilArgument = 1515, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR16', recoilArgument = 1516, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR17', recoilArgument = 1517, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR18', recoilArgument = 1518, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR21', recoilArgument = 1521, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR22', recoilArgument = 1522, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR23', recoilArgument = 1523, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR24', recoilArgument = 1524, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR25', recoilArgument = 1525, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR26', recoilArgument = 1526, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR27', recoilArgument = 1527, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR28', recoilArgument = 1528, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR31', recoilArgument = 1531, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR32', recoilArgument = 1532, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR33', recoilArgument = 1533, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR34', recoilArgument = 1534, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR35', recoilArgument = 1535, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR36', recoilArgument = 1536, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR37', recoilArgument = 1537, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR38', recoilArgument = 1538, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR41', recoilArgument = 1541, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR42', recoilArgument = 1542, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR43', recoilArgument = 1543, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR44', recoilArgument = 1544, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR45', recoilArgument = 1545, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR46', recoilArgument = 1546, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR47', recoilArgument = 1547, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR48', recoilArgument = 1548, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR51', recoilArgument = 1551, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR52', recoilArgument = 1552, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR53', recoilArgument = 1553, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR54', recoilArgument = 1554, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR55', recoilArgument = 1555, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR56', recoilArgument = 1556, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR57', recoilArgument = 1557, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR58', recoilArgument = 1558, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR61', recoilArgument = 1561, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR62', recoilArgument = 1562, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR63', recoilArgument = 1563, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR64', recoilArgument = 1564, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR65', recoilArgument = 1565, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR71', recoilArgument = 1571, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR72', recoilArgument = 1572, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR73', recoilArgument = 1573, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR74', recoilArgument = 1574, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR75', recoilArgument = 1575, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR76', recoilArgument = 1576, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR77', recoilArgument = 1577, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR78', recoilArgument = 1578, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR81', recoilArgument = 1581, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR82', recoilArgument = 1582, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR83', recoilArgument = 1583, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR84', recoilArgument = 1584, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR85', recoilArgument = 1585, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR86', recoilArgument = 1586, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR87', recoilArgument = 1587, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+	{connector_name = 'VR88', recoilArgument = 1588, recoilT0 = -2, recoilT1 = -1, recoilT2 = 1.0, recoilTime = 2},
+}
+
+-------------------------------------------------------------------------------------------------
+--   VLS FRONT 1
+-------------------------------------------------------------------------------------------------
+
+-- Front VLS			32 missiles
+ws = GT_t.inc_ws();
+GT.WS[ws] = {}
+set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
+GT.WS[ws].sharesBarrelsBetweenLaunchers = true
+GT.WS[ws].area = 'VLS1'
+GT.WS[ws].center = 'VF24'
+GT.WS[ws].LN[1].depends_on_unit = BarrySPY1_tracker_ws
+GT.WS[ws].LN[1].PL[1].ammo_capacity = 25
+GT.WS[ws].LN[1].PL[1].virtualStwID = 1;	
+GT.WS[ws].LN[1].BR = barry_front_cells
+-- SM-2ER - inherit LN[1]
+GT.WS[ws].LN[2] = {}
+set_recursive_metatable(GT.WS[ws].LN[2], GT.WS[ws].LN[1])
+GT.WS[ws].LN[2].distanceMax = 180000
+GT.WS[ws].LN[2].depends_on_unit = BarrySPY1_tracker_ws
+GT.WS[ws].LN[2].PL[1].ammo_capacity = 0 -- SM-2ER
+GT.WS[ws].LN[2].PL[1].type_ammunition = "weapons.missiles.SM_2ER"
+GT.WS[ws].LN[2].PL[1].name_ammunition = _("SM 2ER RIM 156")
+GT.WS[ws].LN[2].BR = barry_front_cells
+-- Tomahawk BGM-109B
+GT.WS[ws].LN[3] = {}
+set_recursive_metatable(GT.WS[ws].LN[3], GT_t.WS_t.ship_TOMAHAWK.LN[1])
+GT.WS[ws].LN[3].PL[1].ammo_capacity = 4
+GT.WS[ws].LN[3].PL[1].virtualStwID = 1;	
+GT.WS[ws].LN[3].BR = barry_front_cells
+--16
+-- Rear VLS			64 missiles - inherit front VLS
+ws = GT_t.inc_ws();
+GT.WS[ws] = {}
+set_recursive_metatable(GT.WS[ws], GT.WS[ws-1])
+GT.WS[ws].area = 'VLS2'
+GT.WS[ws].center = 'VR44'
+
+GT.WS[ws].LN[1].PL[1].ammo_capacity = 57
+GT.WS[ws].LN[1].PL[1].virtualStwID = 2;	
+GT.WS[ws].LN[1].BR = barry_rear_cells
+
+GT.WS[ws].LN[2].PL[1].ammo_capacity = 0
+GT.WS[ws].LN[2].PL[1].virtualStwID = 2;	
+GT.WS[ws].LN[2].BR = barry_rear_cells
+
+GT.WS[ws].LN[3].PL[1].ammo_capacity = 4
+GT.WS[ws].LN[3].PL[1].virtualStwID = 2;	
+GT.WS[ws].LN[3].BR = barry_rear_cells
+
 
 --------------------------- AN SPG 62 tracker radar ------------------------------------------
 ws = GT_t.inc_ws();

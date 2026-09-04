@@ -5,7 +5,7 @@ installed 	 = true,
 dirName	  	 = current_mod_path,
 
 fileMenuName = _("JJJ Barry"),
-version		 = "0.0.1",		 
+version		 = "0.0.2",
 state		 = "installed",
 info		 = _("USS Barry (DDG-52)"),
 
