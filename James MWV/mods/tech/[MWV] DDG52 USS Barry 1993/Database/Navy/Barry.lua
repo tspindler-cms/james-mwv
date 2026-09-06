@@ -247,7 +247,7 @@ GT.WS[ws] = {
 			reflection_limit = 0.03,
 			ECM_K = 0.6,
 			min_trg_alt = 5,
-			max_trg_alt = 100000,
+			max_trg_alt = 60000,
 			max_number_of_missiles_channels = 82,
 			beamWidth = math.rad(90);
 		}
@@ -255,7 +255,7 @@ GT.WS[ws] = {
 };
 local BarrySPY1_tracker_ws = {{{'self', ws}}}
 
-for i=2,24 do
+for i=2,10 do
 	ws = GT_t.inc_ws();
 	GT.WS[ws] = {};
 	set_recursive_metatable(GT.WS[ws], GT.WS[first_BarrySPY1_tracker_id]);
