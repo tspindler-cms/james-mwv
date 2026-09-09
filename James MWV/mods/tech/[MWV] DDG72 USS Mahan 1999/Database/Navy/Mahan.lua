@@ -3,6 +3,7 @@
 GT = {};
 dofile(current_mod_path..'/Database/scripts/Mahan_RunwaysAndRoutes.lua') -- the runways and taxiway lua file
 GT_t.ws = 0;
+GT.virtualStwID_names = { [1] = _("Front"), [2] = _("Back"), }
 
 set_recursive_metatable(GT, GT_t.generic_ship)
 
