@@ -216,7 +216,7 @@ GT.WS[ws].omegaY = math.rad(70);
 GT.WS[ws].omegaZ = math.rad(70);
 GT.WS[ws].reference_angle_Y = math.rad(-90);
 GT.WS[ws].reference_angle_Z = math.rad(0);
-GT.WS[ws].LN[1].launch_delay = 12;
+GT.WS[ws].LN[1].launch_delay = 2;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
 GT.WS[ws].LN[1].show_external_missile = false 
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
@@ -246,7 +246,7 @@ GT.WS[ws].omegaY = math.rad(70);
 GT.WS[ws].omegaZ = math.rad(70);
 GT.WS[ws].reference_angle_Y = math.rad(180);
 GT.WS[ws].reference_angle_Z = math.rad(0);
-GT.WS[ws].LN[1].launch_delay = 12;
+GT.WS[ws].LN[1].launch_delay = 2;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 8;
 GT.WS[ws].LN[1].show_external_missile = false
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 8;
@@ -312,7 +312,7 @@ GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "lo
 ----------------------------------------------------
 GT.DetectionRange	= GT.airFindDist;
 GT.ThreatRange		= GT.airWeaponDist;
-GT.Singleton		= "yes";
+GT.Singleton		= "no";
 GT.mapclasskey		= "P0091000065"; --map icon >>MissionEditor\data\NewMap\images
 GT.attribute		= {wsType_Navy, wsType_Ship, wsType_AirCarrier, WSTYPE_PLACEHOLDER, 
 						"Aircraft Carriers", 
@@ -340,3 +340,4 @@ GT.tags  =
 	"Carrier"
 };
 GT.Countries = { "USA" };
+add_surface_unit(GT)
