@@ -94,7 +94,7 @@ GT.animation_arguments.bubbles = {138, 139} -- doesn't go back down ED bug
 
 GT.animation_arguments.catapult_shuttles = {145, 146, 147, 148} -- shuttle args
 GT.animation_arguments.arresting_wires = {400, 401, 402, 403} -- can't get the visibilty anim to work, differnt #arg numbers on the Stennis and SC
-GT.animation_arguments.landing_strip_illumination = 150 --runway lights
+GT.animation_arguments.nav_lights = 0 --runway lights
 GT.animation_arguments.water_propeller = 10
 GT.animation_arguments.radar1_rotation = 1
 GT.animation_arguments.radar2_rotation = 2
@@ -126,10 +126,10 @@ GT.carrierIlluminationStates = {
 
 --Damage Model
 GT.DM = {
-    { area_name = "PALUBA_aft",            area_arg = 70, area_life = 300, armour = {width = 0.030}, area_fire = { connector = "FIRE_DECK_AFT", size = 0.8 }, belongsToRunway = true},
-    { area_name = "PALUBA_cat",            area_arg = 71, area_life = 300, armour = {width = 0.030}, area_fire = { connector = "FIRE_DECK_CAT", size = 0.8 }, belongsToRunway = true},
-    { area_name = "PALUBA_fore",           area_arg = 72, area_life = 300, armour = {width = 0.030}, area_fire = { connector = "FIRE_DECK_FORE", size = 0.8 }, belongsToRunway = true},
-    { area_name = "PALUBA_island",         area_arg = 73, area_life = 300, armour = {width = 0.030}, area_fire = { connector = "FIRE_DECK_ISLAND", size = 0.8 }, belongsToRunway = true},
+    { area_name = "PALUBA_aft",            area_arg = 70, area_life = 300},
+    { area_name = "PALUBA_cat",            area_arg = 71, area_life = 300},
+    { area_name = "PALUBA_fore",           area_arg = 72, area_life = 300},
+    { area_name = "PALUBA_island",         area_arg = 73, area_life = 300},
 	{ area_name = "Deck LSO",              area_arg = 74, area_life = 50 },
     { area_name = "Hull",           area_arg = 75, area_life = 5000 },
     { area_name = "Island",                area_arg = 76, area_life = 150 },
@@ -305,10 +305,13 @@ GT.Rate = 5500.000000
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR"}, --optics types
                 RADAR = {
-                    "CVN652k3_AN/SPS48 surface",
+                    "CVN652k3_AN/SPS10 surface",
                     "CVN652k3_AN/SPS48 air",}
             }; --radar types
-
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 47.0;
+GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange	= GT.airFindDist;
 GT.ThreatRange		= GT.airWeaponDist;
@@ -340,4 +343,3 @@ GT.tags  =
 	"Carrier"
 };
 GT.Countries = { "USA" };
-add_surface_unit(GT)
