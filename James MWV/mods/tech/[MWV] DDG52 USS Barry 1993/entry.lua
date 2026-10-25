@@ -5,13 +5,10 @@ installed 	 = true,
 dirName	  	 = current_mod_path,
 
 fileMenuName = _("JJJ Barry"),
-version		 = "0.0.2",		 
+version		 = "0.0.3",		 
 state		 = "installed",
 info		 = _("USS Barry (DDG-52)"),
 
-
-encyclopedia_path = current_mod_path .. '/Encyclopedia',
--- https://en.wikipedia.org/wiki/USS_Barry_(DDG-52)
 Skins =
 	{
 		{
@@ -31,9 +28,9 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/Barry.zip")
 dofile(current_mod_path.."/Database/Sensors/Barry_sensors.lua")
 
 -- weapons
-dofile(current_mod_path..'/Database/Weapons/Barry_weapons.lua')
+dofile(current_mod_path.."/Database/Weapons/Barry_weapons.lua")
 
 --Ship
-dofile(current_mod_path..'/Database/Navy/Barry.lua')
+dofile(current_mod_path .."/Database/db_ships.lua")
 plugin_done()
 

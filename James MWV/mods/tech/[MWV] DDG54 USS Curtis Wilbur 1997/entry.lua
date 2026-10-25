@@ -5,10 +5,9 @@ installed 	 = true,
 dirName	  	 = current_mod_path,
 
 fileMenuName = _("JJJ Curtis Wilbur"),
-version		 = "0.0.2",		 
+version		 = "0.0.3",		 
 state		 = "installed",
 info		 = _("USS Curtis Wilbur (DDG-54)"),
-
 
 Skins =
 	{
@@ -29,9 +28,9 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/Ctwb.zip")
 dofile(current_mod_path.."/Database/Sensors/Ctwb_sensors.lua")
 
 -- weapons
-dofile(current_mod_path..'/Database/Weapons/Ctwb_weapons.lua')
+dofile(current_mod_path.."/Database/Weapons/Ctwb_weapons.lua")
 
 --Ship
-dofile(current_mod_path..'/Database/Navy/Ctwb.lua')
+dofile(current_mod_path .."/Database/db_ships.lua")
 plugin_done()
 

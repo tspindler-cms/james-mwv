@@ -5,10 +5,9 @@ installed 	 = true,
 dirName	  	 = current_mod_path,
 
 fileMenuName = _("JJJ Mahan"),
-version		 = "0.0.2",		 
+version		 = "0.0.3",		 
 state		 = "installed",
 info		 = _("USS Mahan (DDG-72)"),
-
 
 Skins =
 	{
@@ -29,9 +28,9 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/Mahan.zip")
 dofile(current_mod_path.."/Database/Sensors/Mahan_sensors.lua")
 
 -- weapons
-dofile(current_mod_path..'/Database/Weapons/Mahan_weapons.lua')
+dofile(current_mod_path.."/Database/Weapons/Mahan_weapons.lua")
 
 --Ship
-dofile(current_mod_path..'/Database/Navy/Mahan.lua')
+dofile(current_mod_path .."/Database/db_ships.lua")
 plugin_done()
 

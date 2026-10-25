@@ -17,7 +17,7 @@ GT.animation_arguments.radar2_rotation = 11;
 GT.radar2_period = 2.2; 
 GT.animation_arguments.radar3_rotation = 12;
 GT.radar3_period = 2;  
-GT.animation_arguments.luna_lights = 0;
+GT.animation_arguments.nav_lights = 0;
 
 GT.animation_arguments.water_propeller = 13;
 GT.animation_arguments.flight_deck_fences = 14;
@@ -206,7 +206,7 @@ ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_HARPOON )
 GT.WS[ws].area = 'HP1';
-GT.WS[ws].center = 'HP2'
+GT.WS[ws].center = 'POINT_HARPOON_4'
 GT.WS[ws].canSetTacticalDir = true
 GT.WS[ws].LN[1].distanceMin = 5000
 GT.WS[ws].LN[1].distanceMax = 250000
@@ -487,7 +487,10 @@ GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "lo
                     "Mahan/SPY-1 surface",
                     "Mahan/SPY-1 air",}
             };
-
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 15.3;
+GT.sensor.max_range_finding_target = 500;
 GT.DetectionRange  = GT.airFindDist;
 GT.ThreatRange = GT.airWeaponDist;
 GT.Singleton   ="no";
@@ -505,12 +508,8 @@ GT.Categories = {
 					{name = "Armed Ship"},
 					{name = "HelicopterCarrier"}
 				};
-
-GT.Countries = { "USA", };
-
 GT.tags  =
 {
 	"Destroyer",
 }	
-				
-add_surface_unit(GT)				
+GT.Countries = { "USA" };			
